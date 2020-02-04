@@ -1,6 +1,6 @@
 <h1>NEWS HIGHLIGHT</LI>
 
-<p>AUTHOR</p>
+<h2>AUTHOR</h2>
 <li>Evans Opindi</li>
 <h2>Description</h2>
 <p>This application contains news highlights.The application helps its users to list and preview news articles from various sources.</p>
