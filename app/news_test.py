@@ -1,6 +1,6 @@
 import unittest
 from models import news
-Movie = movie.Movie
+News = news.News
 
 class NewsTest(unittest.TestCase):
     '''
