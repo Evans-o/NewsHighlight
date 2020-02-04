@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-    {% import 'macros.html' as macro%}
+    {% extends 'base.html'%}
+{% import 'macros.html' as macro%}
     <head>
         <meta charset="utf-8">
         {% if title %}
@@ -32,5 +33,26 @@
                 <li>{{ now_showing_news.title}}</li>
             {% endfor %}
         </ul>
+        <!-- Content block -->
+{% block content %}
+
+<!-- Popular movie -->
+<h3> Popular News</h3>
+<ul>
+    {{ macro.displayNewsList(popular)}}
+</ul>
+<!-- Upcoming movie  -->
+<h3> Upcoming News </h3>
+<ul>
+    {{ macro.displayNewsList(upcoming)}}
+</ul>
+<!-- Now showing movie -->
+<h3>Now Showing</h3>
+<ul>
+    {{ macro.displayNewsList(now_showing)}}
+</ul>
+
+
+{% endblock%}
 </body>
 </html>
