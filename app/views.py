@@ -1,3 +1,5 @@
+from app import app
+
 @app.route('/')
 def index():
 
@@ -6,8 +8,8 @@ def index():
     '''
 
     # Getting popular movie
-    popular_news = get_movies('popular')
-    upcoming_news = get_movies('upcoming')
-    now_showing_news = get_movies('now_playing')
+    popular_news = get_news('popular')
+    upcoming_news = get_news('upcoming')
+    now_showing_news = get_news('now_showing')
     title = 'Home - Welcome to The best News Review Website Online'
     return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, now_showing = now_showing_news )
