@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    {% extends 'base.html'%}
-{% import 'macros.html' as macro%}
+    {% import 'macros.html' as macro%}
     <head>
         <meta charset="utf-8">
         {% if title %}
@@ -17,15 +16,14 @@
             {% for popular_news in popular %}
                 <li>{{ popular_news.title}}</li>
             {% endfor %}
-        </ul>
-
+    </ul>
         <!-- Upcoming movie  -->
         <h3> Upcoming Movies </h3>
          <ul>
             {% for upcoming_movie in upcoming %}
                 <li>{{ upcoming_news.title}}</li>
             {% endfor %}
-        </ul>
+    </ul>
         <!-- Now showing movie -->
         <h3>Now Showing</h3>
          <ul>
@@ -33,26 +31,5 @@
                 <li>{{ now_showing_news.title}}</li>
             {% endfor %}
         </ul>
-        <!-- Content block -->
-{% block content %}
-
-<!-- Popular movie -->
-<h3> Popular News</h3>
-<ul>
-    {{ macro.displayNewsList(popular)}}
-</ul>
-<!-- Upcoming movie  -->
-<h3> Upcoming News </h3>
-<ul>
-    {{ macro.displayNewsList(upcoming)}}
-</ul>
-<!-- Now showing movie -->
-<h3>Now Showing</h3>
-<ul>
-    {{ macro.displayNewsList(now_showing)}}
-</ul>
-
-
-{% endblock%}
 </body>
 </html>
